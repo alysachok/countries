@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import { DataGrid, GridFilterModel, GridRenderCellParams, GridSortModel } from '@mui/x-data-grid';
 import React, { useEffect, useState } from 'react';
 
-const BASE_URL = "https:/restcountries.com/v3.1"
+const BASE_URL = "https://restcountries.com/v3.1"
 
 interface Country {
   name: { common: string };

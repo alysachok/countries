@@ -3,7 +3,7 @@ import Button from '@mui/material/Button';
 import { DataGrid, GridFilterModel, GridRenderCellParams, GridSortModel } from '@mui/x-data-grid';
 import React, { useEffect, useState } from 'react';
 
-const BASE_URL = "https://restcountries.com/v3.1"
+const BASE_URL = "https://restcountries.com/v3.1/all"
 
 interface Country {
   name: { common: string };
@@ -43,7 +43,7 @@ const CountriesPage: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${BASE_URL}/all`);
+        const response = await fetch(BASE_URL);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
